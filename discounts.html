@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скидки и акции | Элегантные потолки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 2;
+        }
+        
+        .countdown-timer {
+            background: #3498db;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        
+        .discount-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .discount-card:hover .discount-overlay {
+            transform: translateY(0);
+        }
+        
+        .discount-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(52, 152, 219, 0.95);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .payment-method {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+        
+        .delivery-steps {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .delivery-step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+        
+        .promo-form {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-chevron-up"></i> Элегантные потолки</h1>
+                <p>Натяжные потолки под ключ</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="catalog.html"><i class="fas fa-th"></i> Каталог</a></li>
+                    <li><a href="prices.html"><i class="fas fa-tags"></i> Цены</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-images"></i> Портфолио</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="discounts.html" class="active"><i class="fas fa-percent"></i> Скидки</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+                    <li><a href="#" class="cart-link"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Скидки и акции</h1>
+                <p>Выгодные предложения и специальные условия для наших клиентов</p>
+            </div>
+        </section>
+
+        <!-- Таймер акции -->
+        <div class="countdown-timer">
+            <div class="container">
+                <h3><i class="fas fa-clock"></i> До конца акции осталось:</h3>
+                <div id="countdown" style="font-size: 24px; font-weight: bold;">
+                    <span id="days">00</span>д : 
+                    <span id="hours">00</span>ч : 
+                    <span id="minutes">00</span>м : 
+                    <span id="seconds">00</span>с
+                </div>
+                <p style="margin-top: 10px; font-size: 14px;">Акция действует до 31 декабря 2023 года</p>
+            </div>
+        </div>
+
+        <section class="discounts-section">
+            <div class="container">
+                <h2 class="section-title">Текущие акции и скидки</h2>
+                
+                <div class="categories-grid">
+                    <!-- Акция 1 -->
+                    <div class="category-card discount-card">
+                        <div class="discount-badge">-20%</div>
+                        <div class="category-image">
+                            <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=Новоселам" 
+                                 alt="Скидка новоселам">
+                        </div>
+                        <h3>Новоселам</h3>
+                        <p>Скидка 20% при заказе потолков в новостройке</p>
+                        <div class="discount-overlay">
+                            <h4>Условия акции:</h4>
+                            <p>• Действует для квартир в новостройках</p>
+                            <p>• При заказе от 30 м²</p>
+                            <p>• До 31 декабря 2023</p>
+                            <button class="btn btn-small use-promo" data-code="NEW20">Использовать промокод</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Акция 2 -->
+                    <div class="category-card discount-card">
+                        <div class="discount-badge">-15%</div>
+                        <div class="category-image">
+                            <img src="https://via.placeholder.com/600x400/2ecc71/ffffff?text=3+комнаты" 
+                                 alt="Скидка на 3 комнаты">
+                        </div>
+                        <h3>На 3 комнаты</h3>
+                        <p>Скидка 15% при заказе потолков в 3-х комнатах</p>
+                        <div class="discount-overlay">
+                            <h4>Условия акции:</h4>
+                            <p>• Установка в 3-х и более комнатах</p>
+                            <p>• Общая площадь от 40 м²</p>
+                            <p>• Дизайн-проект в подарок</p>
+                            <button class="btn btn-small use-promo" data-code="3ROOMS15">Использовать промокод</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Акция 3 -->
+                    <div class="category-card discount-card">
+                        <div class="discount-badge">-10%</div>
+                        <div class="category-image">
+                            <img src="https://via.placeholder.com/600x400/e74c3c/ffffff?text=Предоплата" 
+                                 alt="Скидка за предоплату">
+                        </div>
+                        <h3>За предоплату</h3>
+                        <p>Скидка 10% при 100% предоплате</p>
+                        <div class="discount-overlay">
+                            <h4>Условия акции:</h4>
+                            <p>• 100% предоплата заказа</p>
+                            <p>• Действует на все виды потолков</p>
+                            <p>• Без ограничений по площади</p>
+                            <button class="btn btn-small use-promo" data-code="PREPAY10">Использовать промокод</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Постоянные скидки -->
+                <div class="permanent-discounts">
+                    <h2 class="section-title">Постоянные скидки</h2>
+                    <div class="advantages-grid">
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <h3>Пенсионерам</h3>
+                            <p>Постоянная скидка 5% для пенсионеров при предъявлении пенсионного удостоверения</p>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Многодетным семьям</h3>
+                            <p>Скидка 7% для многодетных семей при предъявлении удостоверения</p>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>Повторным клиентам</h3>
+                            <p>Скидка 10% при повторном обращении или по рекомендации</p>
+                        </div>
+                        <div class="advantage-card">
+                            <div class="advantage-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h3>Сезонная скидка</h3>
+                            <p>Скидка до 15% в зимний период (декабрь-февраль)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Форма для промокода -->
+                <div class="promo-form">
+                    <h3><i class="fas fa-ticket-alt"></i> Проверьте свой промокод</h3>
+                    <p>Введите промокод, чтобы узнать размер скидки</p>
+                    <div style="display: flex; gap: 10px; margin-top: 20px;">
+                        <input type="text" id="check-promo" placeholder="Введите промокод" style="flex: 1; padding: 10px;">
+                        <button id="check-promo-btn" class="btn btn-primary">Проверить</button>
+                    </div>
+                    <div id="promo-result" style="margin-top: 15px; padding: 10px; display: none;"></div>
+                </div>
+                
+                <!-- Оплата и доставка -->
+                <div class="payment-delivery-section">
+                    <h2 class="section-title">Оплата и доставка</h2>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <i class="fas fa-money-bill-wave fa-3x" style="color: #27ae60;"></i>
+                            <h4>Наличные</h4>
+                            <p>Оплата наличными при получении</p>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fas fa-credit-card fa-3x" style="color: #3498db;"></i>
+                            <h4>Банковская карта</h4>
+                            <p>Visa, Mastercard, Мир</p>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fas fa-university fa-3x" style="color: #9b59b6;"></i>
+                            <h4>Безналичный расчет</h4>
+                            <p>Для юридических лиц</p>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fas fa-mobile-alt fa-3x" style="color: #e74c3c;"></i>
+                            <h4>Онлайн оплата</h4>
+                            <p>Через СБП или онлайн-банк</p>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 40px; text-align: center;">Доставка материалов</h3>
+                    <div class="delivery-steps">
+                        <div class="delivery-step">
+                            <div class="step-number">1</div>
+                            <h4>Бесплатная доставка</h4>
+                            <p>По Москве в пределах МКАД - бесплатно</p>
+                            <p><strong>0 руб.</strong></p>
+                        </div>
+                        <div class="delivery-step">
+                            <div class="step-number">2</div>
+                            <h4>Московская область</h4>
+                            <p>До 30 км от МКАД</p>
+                            <p><strong>1000 руб.</strong></p>
+                        </div>
+                        <div class="delivery-step">
+                            <div class="step-number">3</div>
+                            <h4>Отдаленные районы</h4>
+                            <p>Свыше 30 км от МКАД</p>
+                            <p><strong>30 руб./км</strong></p>
+                        </div>
+                        <div class="delivery-step">
+                            <div class="step-number">4</div>
+                            <h4>Подъем материалов</h4>
+                            <p>При отсутствии лифта</p>
+                            <p><strong>200 руб./этаж</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div class="delivery-info" style="background: #f1f8ff; padding: 20px; border-radius: 10px; margin-top: 30px;">
+                        <h4><i class="fas fa-info-circle"></i> Важная информация:</h4>
+                        <ul>
+                            <li>Доставка осуществляется в течение 2-3 рабочих дней после замера</li>
+                            <li>Материалы доставляются в день монтажа</li>
+                            <li>Возможна доставка в вечернее время и выходные дни (+20% к стоимости)</li>
+                            <li>Срочная доставка в течение 24 часов (+50% к стоимости доставки)</li>
+                            <li>При отказе от заказа после доставки материалов удерживается стоимость доставки</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Условия акций -->
+                <div class="terms-section" style="margin-top: 50px;">
+                    <h3 class="section-title">Общие условия акций</h3>
+                    <div class="advantages-grid">
+                        <div class="advantage-card">
+                            <h4>Накопительные скидки</h4>
+                            <p>Скидки суммируются до максимального размера 30%</p>
+                        </div>
+                        <div class="advantage-card">
+                            <h4>Срок действия</h4>
+                            <p>Акции действуют до указанной даты или пока есть материалы по акции</p>
+                        </div>
+                        <div class="advantage-card">
+                            <h4>Ограничения</h4>
+                            <p>Акции не распространяются на товары по распродаже</p>
+                        </div>
+                        <div class="advantage-card">
+                            <h4>Один промокод</h4>
+                            <p>К одному заказу можно применить только один промокод</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3><i class="fas fa-chevron-up"></i> Элегантные потолки</h3>
+                    <p>Профессиональная установка натяжных потолков в Москве и Московской области. Работаем с 2010 года.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@potolki.ru</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Строителей, 15</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 20:00</p>
+                    <p>Сб-Вс: 10:00 - 18:00</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="catalog.html">Каталог потолков</a></li>
+                        <li><a href="discounts.html">Скидки и акции</a></li>
+                        <li><a href="prices.html">Цены и калькулятор</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 "Элегантные потолки". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Корзина заказов</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-modal-body">
+                <div class="cart-items">
+                    <!-- Товары будут добавляться через JS -->
+                </div>
+                <div class="cart-total">
+                    <p>Итого: <span class="total-price">0</span> руб.</p>
+                </div>
+            </div>
+            <div class="cart-modal-footer">
+                <button class="btn btn-secondary close-cart">Продолжить выбор</button>
+                <button class="btn btn-primary checkout-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Таймер обратного отсчета
+        function updateCountdown() {
+            const endDate = new Date('December 31, 2023 23:59:59').getTime();
+            const now = new Date().getTime();
+            const timeLeft = endDate - now;
+            
+            if (timeLeft < 0) {
+                document.getElementById('countdown').innerHTML = "Акция завершена";
+                return;
+            }
+            
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Проверка промокодов
+        const promoDiscounts = {
+            'NEW20': { discount: 20, name: 'Новоселам 20%' },
+            '3ROOMS15': { discount: 15, name: '3 комнаты 15%' },
+            'PREPAY10': { discount: 10, name: 'Предоплата 10%' },
+            'PENSIONER5': { discount: 5, name: 'Пенсионерам 5%' },
+            'FAMILY7': { discount: 7, name: 'Многодетным 7%' }
+        };
+        
+        document.getElementById('check-promo-btn').addEventListener('click', function() {
+            const promoInput = document.getElementById('check-promo');
+            const promoCode = promoInput.value.trim().toUpperCase();
+            const resultDiv = document.getElementById('promo-result');
+            
+            if (!promoCode) {
+                resultDiv.innerHTML = '<div style="color: #e74c3c;">Введите промокод</div>';
+                resultDiv.style.display = 'block';
+                return;
+            }
+            
+            if (promoDiscounts[promoCode]) {
+                const promo = promoDiscounts[promoCode];
+                resultDiv.innerHTML = `
+                    <div style="color: #27ae60;">
+                        <h4>✅ Промокод действителен!</h4>
+                        <p><strong>${promo.name}</strong></p>
+                        <p>Скидка: ${promo.discount}%</p>
+                        <p>Скопируйте код: <strong>${promoCode}</strong> для использования в калькуляторе</p>
+                    </div>
+                `;
+            } else {
+                resultDiv.innerHTML = '<div style="color: #e74c3c;">❌ Промокод не найден или недействителен</div>';
+            }
+            
+            resultDiv.style.display = 'block';
+            promoInput.value = '';
+        });
+        
+        // Кнопки использования промокода
+        document.querySelectorAll('.use-promo').forEach(button => {
+            button.addEventListener('click', function() {
+                const promoCode = this.getAttribute('data-code');
+                document.getElementById('check-promo').value = promoCode;
+                document.getElementById('check-promo-btn').click();
+                
+                // Прокрутка к форме
+                document.querySelector('.promo-form').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- Добавьте перед закрывающим тегом </section> в prices.html -->
+
+<section class="payment-delivery-section" style="margin-top: 80px;">
+    <div class="container">
+        <h2 class="section-title">Оплата и доставка</h2>
+        
+        <div class="calculator-container">
+            <div class="calculator-info">
+                <h3>Способы оплаты</h3>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <i class="fas fa-money-bill-wave" style="color: #27ae60; font-size: 24px; margin-right: 15px;"></i>
+                        <div>
+                            <h4 style="margin: 0;">Наличными</h4>
+                            <p style="margin: 5px 0 0;">При получении заказа мастеру</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <i class="fas fa-credit-card" style="color: #3498db; font-size: 24px; margin-right: 15px;"></i>
+                        <div>
+                            <h4 style="margin: 0;">Банковской картой</h4>
+                            <p style="margin: 5px 0 0;">Visa, Mastercard, Мир через терминал</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <i class="fas fa-university" style="color: #9b59b6; font-size: 24px; margin-right: 15px;"></i>
+                        <div>
+                            <h4 style="margin: 0;">Безналичный расчет</h4>
+                            <p style="margin: 5px 0 0;">Для юридических лиц по счету</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <i class="fas fa-mobile-alt" style="color: #e74c3c; font-size: 24px; margin-right: 15px;"></i>
+                        <div>
+                            <h4 style="margin: 0;">Онлайн оплата</h4>
+                            <p style="margin: 5px 0 0;">Через СБП или онлайн-банк по ссылке</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px;">Этапы работы</h3>
+                <ol style="padding-left: 20px; line-height: 1.8;">
+                    <li><strong>Заявка</strong> - оставляете заявку на сайте или по телефону</li>
+                    <li><strong>Замер</strong> - бесплатный выезд специалиста</li>
+                    <li><strong>Расчет</strong> - точный расчет стоимости</li>
+                    <li><strong>Договор</strong> - заключение договора</li>
+                    <li><strong>Предоплата</strong> - 30% от стоимости (если требуется)</li>
+                    <li><strong>Производство</strong> - изготовление потолка (1-3 дня)</li>
+                    <li><strong>Доставка и монтаж</strong> - установка потолка</li>
+                    <li><strong>Оплата</strong> - окончательный расчет</li>
+                    <li><strong>Гарантия</strong> - выдача гарантийного талона</li>
+                </ol>
+            </div>
+            
+            <div class="calculator-form">
+                <h3>Стоимость доставки</h3>
+                
+                <div class="form-group">
+                    <label for="delivery-zone">Зона доставки:</label>
+                    <select id="delivery-zone">
+                        <option value="0">Москва (в пределах МКАД) - БЕСПЛАТНО</option>
+                        <option value="1000">Московская область (до 30 км от МКАД) - 1000 руб.</option>
+                        <option value="30">Московская область (свыше 30 км) - 30 руб./км</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="distance">Расстояние от МКАД (км):</label>
+                    <div class="range-container">
+                        <input type="range" id="distance" min="0" max="100" value="0" disabled>
+                        <span id="distance-value">0 км</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="floor">Этаж (без лифта):</label>
+                    <div class="range-container">
+                        <input type="range" id="floor" min="1" max="20" value="1">
+                        <span id="floor-value">1 этаж</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Дополнительные услуги доставки:</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="urgent-delivery" value="500">
+                            <span>Срочная доставка (24 часа) +500 руб.</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="evening-delivery" value="300">
+                            <span>Доставка в вечернее время (после 18:00) +300 руб.</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="weekend-delivery" value="400">
+                            <span>Доставка в выходной день +400 руб.</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="calculator-result" style="margin-top: 20px;">
+                    <h3>Стоимость доставки:</h3>
+                    <div class="result-price" id="delivery-price">0 руб.</div>
+                    <p class="result-note">*Доставка материалов осуществляется в день монтажа</p>
+                </div>
+                
+                <div style="background: #f1f8ff; padding: 20px; border-radius: 10px; margin-top: 30px;">
+                    <h4><i class="fas fa-info-circle"></i> Условия доставки:</h4>
+                    <ul style="margin: 10px 0 0 20px;">
+                        <li>Доставка в течение 2-3 рабочих дней после замера</li>
+                        <li>Бесплатное хранение материалов на складе до 7 дней</li>
+                        <li>Подъем материалов на этаж при наличии лифта - бесплатно</li>
+                        <li>Минимальная стоимость доставки - 500 руб.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Калькулятор доставки
+    document.addEventListener('DOMContentLoaded', function() {
+        const deliveryZone = document.getElementById('delivery-zone');
+        const distanceSlider = document.getElementById('distance');
+        const distanceValue = document.getElementById('distance-value');
+        const floorSlider = document.getElementById('floor');
+        const floorValue = document.getElementById('floor-value');
+        const urgentDelivery = document.getElementById('urgent-delivery');
+        const eveningDelivery = document.getElementById('evening-delivery');
+        const weekendDelivery = document.getElementById('weekend-delivery');
+        const deliveryPriceElement = document.getElementById('delivery-price');
+        
+        // Обновление значений
+        function updateDeliveryValues() {
+            distanceValue.textContent = `${distanceSlider.value} км`;
+            
+            const floor = parseInt(floorSlider.value);
+            floorValue.textContent = `${floor} ${getFloorWord(floor)}`;
+            
+            calculateDelivery();
+        }
+        
+        function getFloorWord(floor) {
+            if (floor === 1) return 'этаж';
+            if (floor >= 2 && floor <= 4) return 'этажа';
+            return 'этажей';
+        }
+        
+        // Расчет стоимости доставки
+        function calculateDelivery() {
+            let total = 0;
+            
+            // Базовая стоимость по зоне
+            const zoneValue = deliveryZone.value;
+            if (zoneValue === '30') {
+                // 30 руб./км
+                total = 30 * parseInt(distanceSlider.value);
+            } else {
+                total = parseInt(zoneValue);
+            }
+            
+            // Подъем на этаж (без лифта)
+            const floor = parseInt(floorSlider.value);
+            if (floor > 1) {
+                total += (floor - 1) * 200; // 200 руб. за каждый этаж выше первого
+            }
+            
+            // Дополнительные услуги
+            if (urgentDelivery.checked) total += 500;
+            if (eveningDelivery.checked) total += 300;
+            if (weekendDelivery.checked) total += 400;
+            
+            // Минимальная стоимость
+            total = Math.max(total, 500);
+            
+            // Форматирование
+            deliveryPriceElement.textContent = new Intl.NumberFormat('ru-RU').format(total) + ' руб.';
+            
+            return total;
+        }
+        
+        // Обработчики событий
+        deliveryZone.addEventListener('change', function() {
+            if (this.value === '30') {
+                distanceSlider.disabled = false;
+            } else {
+                distanceSlider.disabled = true;
+                distanceSlider.value = 0;
+            }
+            updateDeliveryValues();
+        });
+        
+        distanceSlider.addEventListener('input', updateDeliveryValues);
+        floorSlider.addEventListener('input', updateDeliveryValues);
+        urgentDelivery.addEventListener('change', calculateDelivery);
+        eveningDelivery.addEventListener('change', calculateDelivery);
+        weekendDelivery.addEventListener('change', calculateDelivery);
+        
+        // Инициализация
+        updateDeliveryValues();
+    });
+</script>

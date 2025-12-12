@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Элегантные потолки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-chevron-up"></i> Элегантные потолки</h1>
+                <p>Натяжные потолки под ключ</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="catalog.html"><i class="fas fa-th"></i> Каталог</a></li>
+                    <li><a href="prices.html"><i class="fas fa-tags"></i> Цены</a></li>
+                    <li><a href="portfolio.html"><i class="fas fa-images"></i> Портфолио</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="contacts.html" class="active"><i class="fas fa-address-book"></i> Контакты</a></li>
+                    <li><a href="#" class="cart-link"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Контакты</h1>
+                <p>Свяжитесь с нами для консультации, замера или оформления заказа</p>
+            </div>
+        </section>
+
+        <section class="contacts-section">
+            <div class="container">
+                <div class="contacts-container">
+                    <div class="contact-info">
+                        <h2>Наши контакты</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Телефоны</h3>
+                                <p>+7 (495) 123-45-67</p>
+                                <p>+7 (926) 765-43-21</p>
+                                <p class="contact-note">Звонки принимаются ежедневно с 9:00 до 20:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Электронная почта</h3>
+                                <p>info@potolki.ru</p>
+                                <p>zakaz@potolki.ru</p>
+                                <p class="contact-note">Отвечаем в течение 2-х часов в рабочее время</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Адрес офиса</h3>
+                                <p>г. Москва, ул. Строителей, д. 15, офис 304</p>
+                                <p class="contact-note">Ближайшая станция метро "Стройгородская"</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Часы работы</h3>
+                                <p><strong>Понедельник - Пятница:</strong> 9:00 - 20:00</p>
+                                <p><strong>Суббота - Воскресенье:</strong> 10:00 - 18:00</p>
+                                <p class="contact-note">Выезд замерщика возможен в любое удобное для вас время</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <h3>Мы в социальных сетях</h3>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-vk"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-telegram"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <div class="contact-form">
+                            <h2>Оставить заявку</h2>
+                            <p>Заполните форму, и мы перезвоним вам в течение 15 минут</p>
+                            
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label for="name">Ваше имя *</label>
+                                    <input type="text" id="name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Телефон *</label>
+                                    <input type="tel" id="phone" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Сообщение</label>
+                                    <textarea id="message" rows="4" placeholder="Опишите, что вас интересует..."></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="service">Услуга</label>
+                                    <select id="service">
+                                        <option value="consultation">Консультация</option>
+                                        <option value="measurement">Вызов замерщика</option>
+                                        <option value="calculation">Расчет стоимости</option>
+                                        <option value="installation">Заказ установки</option>
+                                        <option value="other">Другое</option>
+                                    </select>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-large">Отправить заявку</button>
+                                <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+                            </form>
+                        </div>
+                        
+                        <div class="callback-info">
+                            <h3>Срочный вызов замерщика</h3>
+                            <p>Если вам нужен срочный замер, позвоните по телефону:</p>
+                            <div class="callback-phone">+7 (926) 765-43-21</div>
+                            <p>Мы приедем в течение 2-х часов в пределах МКАД</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-section">
+                    <h2>Как нас найти</h2>
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="map-info">
+                                <h3><i class="fas fa-map-marker-alt"></i> Наш офис</h3>
+                                <p>г. Москва, ул. Строителей, д. 15, офис 304</p>
+                                <p><strong>Как добраться:</strong></p>
+                                <p>• От метро "Стройгородская": пешком 10 минут</p>
+                                <p>• Автобусы: 123, 456, 789 до остановки "Ул. Строителей"</p>
+                                <p>• Есть парковка для клиентов</p>
+                            </div>
+                            <div class="map-image">
+                                <div class="map-overlay">
+                                    <p>Здесь будет интерактивная карта</p>
+                                    <p>На практике можно подключить Яндекс.Карты или Google Maps</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3><i class="fas fa-chevron-up"></i> Элегантные потолки</h3>
+                    <p>Профессиональная установка натяжных потолков в Москве и Московской области. Работаем с 2010 года.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@potolki.ru</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Строителей, 15</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 20:00</p>
+                    <p>Сб-Вс: 10:00 - 18:00</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="catalog.html">Каталог потолков</a></li>
+                        <li><a href="portfolio.html">Наши работы</a></li>
+                        <li><a href="prices.html">Цены и калькулятор</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 "Элегантные потолки". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Корзина заказов</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-modal-body">
+                <div class="cart-items">
+                    <!-- Товары будут добавляться через JS -->
+                </div>
+                <div class="cart-total">
+                    <p>Итого: <span class="total-price">0</span> руб.</p>
+                </div>
+            </div>
+            <div class="cart-modal-footer">
+                <button class="btn btn-secondary close-cart">Продолжить выбор</button>
+                <button class="btn btn-primary checkout-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        // Обработка формы контактов
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Получаем данные формы
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const service = document.getElementById('service').value;
+                
+                // В реальном проекте здесь был бы AJAX-запрос на сервер
+                alert(`Спасибо, ${name}! Ваша заявка на "${service}" принята. Мы перезвоним вам по номеру ${phone} в течение 15 минут.`);
+                
+                // Сброс формы
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

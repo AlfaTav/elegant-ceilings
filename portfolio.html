@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио работ | Элегантные потолки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-chevron-up"></i> Элегантные потолки</h1>
+                <p>Натяжные потолки под ключ</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="catalog.html"><i class="fas fa-th"></i> Каталог</a></li>
+                    <li><a href="prices.html"><i class="fas fa-tags"></i> Цены</a></li>
+                    <li><a href="portfolio.html" class="active"><i class="fas fa-images"></i> Портфолио</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> О нас</a></li>
+                    <li><a href="contacts.html"><i class="fas fa-address-book"></i> Контакты</a></li>
+                    <li><a href="#" class="cart-link"><i class="fas fa-shopping-cart"></i> Корзина <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Наши работы</h1>
+                <p>Примеры установленных натяжных потолков в различных помещениях</p>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="portfolio-filters">
+                    <button class="portfolio-filter-btn active" data-filter="all">Все работы</button>
+                    <button class="portfolio-filter-btn" data-filter="apartment">Квартиры</button>
+                    <button class="portfolio-filter-btn" data-filter="house">Частные дома</button>
+                    <button class="portfolio-filter-btn" data-filter="office">Офисы</button>
+                    <button class="portfolio-filter-btn" data-filter="commercial">Коммерческие помещения</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="apartment">
+                        <div class="portfolio-item-img">
+                            <img src="https://7kvadratov.by/upload/iblock/07b/v64rtdjyqx3qas5zvobd9bo3h9lpakgo.jpg" alt="Гостиная с матовым потолком">
+                            <div class="portfolio-item-overlay">
+                                <h3>Гостиная в ЖК "Престиж"</h3>
+                                <p>Матовый потолок, 25 м², установка за 1 день</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="apartment">
+                        <div class="portfolio-item-img">
+                            <img src="https://horoshiepotolki.ru/uploads/gallery/147461829057e4e3b28480e.jpg" alt="Кухня с глянцевым потолком">
+                            <div class="portfolio-item-overlay">
+                                <h3>Кухня в панельном доме</h3>
+                                <p>Глянцевый потолок, 12 м², встроенные светильники</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="house">
+                        <div class="portfolio-item-img">
+                            <img src="https://design.pibig.info/uploads/posts/2023-04/1680872815_design-pibig-info-p-interer-spalni-s-podvesnim-potolkom-dizain-1.jpg" alt="Спальня в коттедже">
+                            <div class="portfolio-item-overlay">
+                                <h3>Спальня в коттедже, Барвиха</h3>
+                                <p>Сатиновый потолок, 18 м², подсветка по периметру</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="office">
+                        <div class="portfolio-item-img">
+                            <img src="https://expert-potolkov.ru/wp-content/uploads/2023/11/natyazhnye-potolki-s-fotopechatyu.png" alt="Офис с фотопечатью">
+                            <div class="portfolio-item-overlay">
+                                <h3>Офис IT-компании</h3>
+                                <p>Потолок с фотопечатью, 45 м², логотип компании</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="commercial">
+                        <div class="portfolio-item-img">
+                            <img src="https://bard.su/upload/iblock/e0b/e0bc201e3d9b1c8727df8d26e34c26e3.jpg" alt="Торговый зал">
+                            <div class="portfolio-item-overlay">
+                                <h3>Торговый зал магазина</h3>
+                                <p>Многоуровневый потолок, 120 м², точечное освещение</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="apartment">
+                        <div class="portfolio-item-img">
+                            <img src="https://format-potolok.ru/images/stat/v_detskoy/16.jpg" alt="Детская комната">
+                            <div class="portfolio-item-overlay">
+                                <h3>Детская комната</h3>
+                                <p>Потолок с фотопечатью, 15 м², звездное небо</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="house">
+                        <div class="portfolio-item-img">
+                            <img src="https://images.stroistyle.com/posts/8222680-ofisnyi-potolok-3.jpg" alt="Кабинет в частном доме">
+                            <div class="portfolio-item-overlay">
+                                <h3>Кабинет в загородном доме</h3>
+                                <p>Матовый потолок, 20 м², встроенные светильники</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="commercial">
+                        <div class="portfolio-item-img">
+                            <img src="https://amiel.club/uploads/posts/2022-08/1659556280_1-amiel-club-p-potolok-v-kafe-interer-krasivo-foto-1.jpg" alt="Ресторан">
+                            <div class="portfolio-item-overlay">
+                                <h3>Ресторан "La Piazza"</h3>
+                                <p>Глянцевый потолок, 85 м², многоуровневая конструкция</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-section">
+                    <h2 class="section-title">Отзывы клиентов</h2>
+                    <div class="reviews-grid">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-author">
+                                    <img src="data:image/jpeg;base64,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" alt="Александр">
+                                    <div>
+                                        <h4>Александр Петров</h4>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p>"Заказывал потолки в трехкомнатной квартире. Работу выполнили за два дня, очень аккуратно, без мусора. Потолки выглядят идеально, особенно глянцевый в гостиной - визуально увеличил пространство. Рекомендую!"</p>
+                            </div>
+                            <div class="review-footer">
+                                <span>Установлен: матовый и глянцевый потолок</span>
+                                <span>Май 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-author">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI2yWMjpwatCFFPnZgbHXhr0Q13tObHpLZZA&s" alt="Елена">
+                                    <div>
+                                        <h4>Елена Смирнова</h4>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p>"В детской комнате сделали потолок с фотопечатью - звездное небо. Ребенок в восторге! Вечером включаем подсветку, и комната превращается в планетарий. Спасибо за креативный подход и качественную работу!"</p>
+                            </div>
+                            <div class="review-footer">
+                                <span>Установлен: потолок с фотопечатью</span>
+                                <span>Апрель 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-author">
+                                    <img src="data:image/jpeg;base64,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" alt="Путин">
+                                    <div>
+                                        <h4> Владимир Владимирович</h4>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-body">
+                                <p>"Устанавливали потолки в новом офисе. Площадь большая - 120 м². Сделали все быстро, несмотря на сложную многоуровневую конструкцию. Персонал работает профессионально, соблюдают сроки. Будем рекомендовать партнерам."</p>
+                            </div>
+                            <div class="review-footer">
+                                <span>Установлен: многоуровневый потолок</span>
+                                <span>Март 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3><i class="fas fa-chevron-up"></i> Элегантные потолки</h3>
+                    <p>Профессиональная установка натяжных потолков в Москве и Московской области. Работаем с 2010 года.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@potolki.ru</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Строителей, 15</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 20:00</p>
+                    <p>Сб-Вс: 10:00 - 18:00</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="catalog.html">Каталог потолков</a></li>
+                        <li><a href="portfolio.html">Наши работы</a></li>
+                        <li><a href="prices.html">Цены и калькулятор</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 "Элегантные потолки". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Корзина заказов</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-modal-body">
+                <div class="cart-items">
+                    <!-- Товары будут добавляться через JS -->
+                </div>
+                <div class="cart-total">
+                    <p>Итого: <span class="total-price">0</span> руб.</p>
+                </div>
+            </div>
+            <div class="cart-modal-footer">
+                <button class="btn btn-secondary close-cart">Продолжить выбор</button>
+                <button class="btn btn-primary checkout-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        // Фильтрация портфолио
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Убираем активный класс у всех кнопок
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Добавляем активный класс текущей кнопке
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
